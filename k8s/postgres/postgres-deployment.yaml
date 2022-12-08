@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres
-  namespace: backstage
+  namespace: backstage-jeff-tian
 spec:
   replicas: 1
   selector:

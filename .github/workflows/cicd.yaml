@@ -9,7 +9,7 @@ on:
     - cron: '0 */12 * * *'
 
 jobs:
-  deploy-okteto:
+  deploy-postgres-to-okteto:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
