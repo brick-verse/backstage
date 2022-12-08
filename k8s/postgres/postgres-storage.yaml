@@ -18,7 +18,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: postgres-storage-claim
+  name: postgres-pv-claim
   namespace: backstage-jeff-tian
 spec:
   storageClassName: manual
