@@ -3,7 +3,7 @@ npm i -g yarn
 yarn install --production=false
 yarn tsc
 yarn build:backend
-yarn build-image --tag jefftian/backstage
+DOCKER_BUILDKIT=1 yarn build-image --tag jefftian/backstage
 docker images
 docker run --network host -e CI=true -d -p 127.0.0.1:7007:7007 --name backstage jefftian/backstage
 docker ps | grep -q backstage
