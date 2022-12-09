@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backstage
-          image: jefftianlego/backstage:1.0.0
+          image: jefftianlego/backstage
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
