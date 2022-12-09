@@ -3,6 +3,9 @@ kind: Service
 metadata:
   name: backstage
   namespace: backstage-jeff-tian
+
+  annotations:
+    dev.okteto.com/auto-ingress: 'true'
 spec:
   selector:
     app: backstage
