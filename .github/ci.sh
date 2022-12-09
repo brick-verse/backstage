@@ -10,6 +10,6 @@ docker ps | grep -q backstage
 docker ps -aqf "name=backstage$"
 docker push jefftian/backstage
 docker logs $(docker ps -aqf name=backstage$)
-curl localhost:7007 || docker logs $(docker ps -aqf name=backstage$)
+# curl localhost:7007 || docker logs $(docker ps -aqf name=backstage$)
 docker kill backstage || echo "backstage killed"
 docker rm backstage || echo "backstage removed"
