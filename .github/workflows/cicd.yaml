@@ -30,3 +30,9 @@ jobs:
 
       - run: sops -d k8s/postgres/postgres-secrets.yaml --aws-profile lambda-doc-rotary | kubectl apply -f -
       - run: kubectl apply -k k8s/postgres&&kubectl rollout restart deploy postgres
+
+  deploy-backstage-to-okteto:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sops -d k8s/backstage/backstage-secrets.yaml --aws-profile lambda-doc-rotary | kubectl apply -f -
+      - run: kubectl apply -k k8s/backstage&&kubectl rollout restart deploy backstage
